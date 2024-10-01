@@ -163,7 +163,7 @@ export async function onRequestPost(context) {  // Contents of context object
                 JSON.stringify([{ 'src': `/file/${fullId}` }]), 
                 {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' }
+                    headers: { 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': '*' }
                 }
             );
         }
