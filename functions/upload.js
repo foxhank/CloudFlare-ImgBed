@@ -44,7 +44,6 @@ export async function onRequestPost(context) {  // Contents of context object
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With, Accept, Origin, authCode',
-                'Content-Length': '0'
             }
         });
     }
@@ -175,7 +174,7 @@ export async function onRequestPost(context) {  // Contents of context object
                 JSON.stringify([{ 'src': `/file/${fullId}` }]), 
                 {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': 'https://dl.foxhank.top/' }
+                    headers: { 'Content-Type': 'application/json' , 'Access-Control-Allow-Origin': '*' }
                 }
             );
         }
